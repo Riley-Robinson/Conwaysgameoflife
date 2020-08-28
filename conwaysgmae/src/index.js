@@ -85,8 +85,9 @@ class Buttons extends React.Component {
 						onSelect={this.handleSelect}
 					>
 						<Dropdown.Item eventKey="1">20x10</Dropdown.Item>
+            <br/>
 						<Dropdown.Item eventKey="2">50x30</Dropdown.Item>
-						<Dropdown.Item eventKey="3">70x50</Dropdown.Item>
+            <br/>          	<Dropdown.Item eventKey="3">70x50</Dropdown.Item>
 					</DropdownButton>
 				</ButtonToolbar>
 			</div>
@@ -224,12 +225,14 @@ class Main extends React.Component {
 					cols={this.cols}
 					selectBox={this.selectBox}
 				/>
+        <div className = "words" >
 				<h2>Generations: {this.state.generation}</h2>
         <p>Births: Each dead cell adjacent to exactly three live neighbors will become live in the next generation.</p>
         <p>Death by isolation: Each live cell with one or fewer live neighbors will die in the next generation.</p>
         <p>Death by overcrowding: Each live cell with four or more live neighbors will die in the next generation.</p>
         <p> Survival: Each live cell with either two or three live neighbors will remain alive for the next generation.</p>
 			</div>
+      </div>
 		);
 	}
 }
